@@ -100,6 +100,8 @@ button {
 }
 
 .header-menu-item {
+  position: relative;
+
   font-size: 13px;
 }
 
@@ -107,8 +109,21 @@ button {
   margin-left: 35px;
 }
 
-.header-menu-item > a:hover {
-  border-top: 2px solid;
+.header-menu-item:before {
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 2px;
+  width: 0;
+  bottom: 20px;
+  left: 50%;
+  transition: width .3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.header-menu-item:hover:before {
+  width: 100%;
 }
 
 .header-title {
@@ -204,14 +219,17 @@ button {
 
 .post-title > a:hover {
   color: #b59f5b;
+  transition: color .5s;
 }
 
 .link-hover-white:hover {
   color: #ffffff;
+  transition: color .5s;
 }
 
 .trend-title {
   color: #ffffff;
+  transition: color .5s;
 }
 
 .trend1 {
@@ -229,8 +247,6 @@ button {
 .trend4 {
   background-image: url("../img/trend4.jpg");
 }
-
-
 
 .page {
   display: flex;
@@ -291,6 +307,7 @@ button {
 
 .link-hover-black:hover {
   color: #000;
+  transition: color .5s;
 }
 
 .post-meta {
@@ -314,6 +331,7 @@ button {
 
 .post-author:hover {
   color: #b59f5b;
+  transition: color .5s;
 }
 
 .desc {
@@ -389,6 +407,7 @@ button {
 
 .new-post-title > a:hover {
   color: #b59f5b;
+  transition: color .5s;
 }
 
 .search-widget {
@@ -431,6 +450,7 @@ button {
 
 .search-btn:hover {
   background-color: #a7973d;
+  transition: color .5s;
 }
 
 .mailing {
@@ -464,6 +484,7 @@ button {
 
 .mailing-btn:hover {
   background-color: #a7973d;
+  transition: color .5s;
 }
 
 .tags-widget {
@@ -495,6 +516,7 @@ button {
 .tag-item-link:hover {
   color: white;
   background-color: #b59f5b;
+  transition: all .5s;
 }
 
 .themes-widget {
@@ -519,6 +541,7 @@ button {
 
 .theme-item > a:hover {
   color: #b59f5b;
+  transition: color .5s;
 }
 
 .theme-index {
@@ -536,26 +559,31 @@ button {
 
 .our-products-item {
   display: flex;
-  flex-basis: 300px;
+  flex-basis: 345px;
 
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .products-img {
-  width: 100%;
-  height: 100%;
+
+
 }
 
 .our-products-header {
+  position: relative;
+  bottom: 10px;
+
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  width: 300px;
 
-  padding: 20px 0 30px;
+  padding: 30px 0 10px;
 
-  outline: 2px solid #a7973d;
+  outline: 3px solid #a7973d;
   outline-offset: 20px;
-
 }
 
 .product-title {
@@ -576,6 +604,25 @@ button {
   margin-top: 20px;
 }
 
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.last-price {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.present-price {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .shopping-btn {
   width: 140px;
   height: 50px;
@@ -590,6 +637,7 @@ button {
 
 .shopping-btn:hover {
   background-color: #a7973d;
+  transition: color .5s;
 }
 
 .footer {
@@ -612,7 +660,7 @@ button {
   margin: 0 13px;
 }
 
-.social-network-icon {
+.social-network-link {
   display: block;
   width: 24px;
   height: 24px;
@@ -622,24 +670,9 @@ button {
   background-size: 20px;
 }
 
-.twitter-link {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
-}
-
-.pinterest-link {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
-}
-
-.facebook-link {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
-}
-
-.instagram-link {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
-}
-
-.tumblr-link {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+.social-network-icon:hover {
+  fill: #a7973d;
+  transition: color .5s;
 }
 
 .copyright {
