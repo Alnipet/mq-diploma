@@ -17,12 +17,14 @@
   src: url("../fonts/OpenSans-Bold.woff");
 }
 
+body {
+  margin: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
-
   font-family: OpenSans-Regular, sans-serif;
 }
 
@@ -269,7 +271,6 @@ button {
 
 .post {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -672,7 +673,7 @@ button {
 
 .social-network-icon:hover {
   fill: #a7973d;
-  transition: color .5s;
+  transition: fill .5s;
 }
 
 .copyright {
@@ -685,4 +686,33 @@ button {
   font-family: OpenSans-Bold, sans-serif;
 
   color: #999999;
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .aside-posts-list {
+    flex-wrap: wrap;
+  }
+
+  .trend-posts-item:nth-child(1n+2) {
+    margin-left: 0;
+  }
+
+  .trend-posts-item:nth-child(2n+2) {
+    margin-left: 2px;
+  }
+
+  .trend-posts-item {
+    max-width: calc(50% - 2px);
+    flex-basis: 50vw;
+
+    margin-bottom: 3px;
+  }
+  /*замерить размеры в фотошопе*/
+  .posts {
+    width: calc(90% - 272px);
+  }
+
+  .post {
+    flex-direction: column;
+  }
 }
