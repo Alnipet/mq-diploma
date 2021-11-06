@@ -24,6 +24,7 @@ body {
 html, body {
   height: 100%;
   width: 100%;
+
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -34,6 +35,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: OpenSans-Regular, sans-serif;
 }
 
@@ -125,14 +127,16 @@ button {
 }
 
 .header-menu-item:before {
-  display: block;
   content: "";
   position: absolute;
-  background-color: #ffffff;
-  height: 2px;
-  width: 0;
   bottom: 20px;
   left: 50%;
+
+  display: block;
+  height: 2px;
+  width: 0;
+
+  background-color: #ffffff;
   transition: width .3s ease-in-out;
   transform: translateX(-50%);
 }
@@ -147,9 +151,9 @@ button {
   margin-left: auto;
   margin-right: auto;
 
+  font-family: OpenSans-Bold, sans-serif;
   font-size: 2.8rem;
   line-height: 1.7;
-  font-family: OpenSans-Bold, sans-serif;
   text-align: center;
 }
 
@@ -158,18 +162,17 @@ button {
 }
 
 .aside-title {
-  font-size: 1.25rem;
   font-family: OpenSans-Bold, sans-serif;
+  font-size: 1.25rem;
   text-transform: uppercase;
   text-align: center;
 }
 
 .aside-posts-list {
+  margin-top: 30px;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  margin-top: 30px;
 }
 
 .trend-posts-item {
@@ -179,7 +182,8 @@ button {
   flex-direction: column;
   justify-content: flex-end;
   flex-basis: 25%;
-  height: 300px;
+  max-width: 25%;
+  min-height: 300px;
 
   background-color: black;
   background-position: center;
@@ -195,16 +199,16 @@ button {
 
 .trend-posts-item::after {
   content: "";
-
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
 
   background-color: black;
   opacity: 50%;
+
+  z-index: -1;
 }
 
 .post-header {
@@ -226,10 +230,10 @@ button {
   margin-top: 8px;
   margin-bottom: 25px;
 
+  font-family: OpenSans-Bold, sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 1.2;
-  font-family: OpenSans-Bold, sans-serif;
 }
 
 .post-title > a:hover {
@@ -286,7 +290,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   margin-bottom: 61px;
 }
 
@@ -339,8 +342,8 @@ button {
 }
 
 .post-author {
-  font-size: 0.75rem;
   font-family: OpenSans-Bold, sans-serif;
+  font-size: 0.75rem;
 }
 
 .post-author:hover {
@@ -363,10 +366,9 @@ button {
 }
 
 .sidebar-item-title {
+  font-family: OpenSans-Bold, sans-serif;
   font-size: 0.9rem;
   line-height: 1.1;
-  font-family: OpenSans-Bold, sans-serif;
-
   text-align: center;
   text-transform: uppercase;
 }
@@ -430,10 +432,12 @@ button {
 }
 
 .visually-hidden {
+  position: absolute;
+
   width: 1px;
   height: 1px;
+
   clip: rect(1px, 1px, 1px, 1px);
-  position: absolute;
 }
 
 .search {
@@ -488,8 +492,8 @@ button {
   height: 50px;
   margin-top: 16px;
 
-  font-size: 0.87rem;
   font-family: OpenSans-Bold, sans-serif;
+  font-size: 0.87rem;
   text-transform: uppercase;
   color: #ffffff;
 
@@ -515,8 +519,8 @@ button {
   margin-right: 10px;
   margin-bottom: 7px;
 
-  font-size: 0.75rem;
   font-family: OpenSans-Bold, sans-serif;
+  font-size: 0.75rem;
   text-transform: uppercase;
 
   border: 3px solid #eeeeee;
@@ -543,7 +547,6 @@ button {
 
 .theme-item {
   display: flex;
-
   height: 45px;
   padding: 10px 0;
 
@@ -573,15 +576,14 @@ button {
 
 .our-products-item {
   display: flex;
-  flex-basis: 345px;
-
+  width: 345px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
 .products-img {
-
+  width: 100%;
 }
 
 .our-products-header {
@@ -592,7 +594,6 @@ button {
   flex-direction: column;
   flex-grow: 1;
   width: 300px;
-
   padding: 30px 0 10px;
 
   outline: 3px solid #a7973d;
@@ -641,8 +642,8 @@ button {
   width: 140px;
   height: 50px;
 
-  font-size: 0.87rem;
   font-family: OpenSans-Bold, sans-serif;
+  font-size: 0.87rem;
   text-transform: uppercase;
   color: #ffffff;
 
@@ -661,6 +662,7 @@ button {
 
 .footer-inner {
   padding: 30px 0;
+
   background-color: #f3f7f6;
 }
 
@@ -758,8 +760,7 @@ button {
   }
 
   .our-products-item {
-    flex-basis: 343px;
-
+    min-height: 343px;
     margin-top: 30px;
   }
 
@@ -784,7 +785,6 @@ button {
   .trend-posts-item {
     max-width: calc(50vw - 2px);
     flex-basis: 50vw;
-
     margin-bottom: 3px;
   }
 
@@ -832,7 +832,8 @@ button {
   }
 
   .trend-posts-item {
-    flex-basis: 60vw;
+    max-width: 100%;
+    min-height: 60vw;
     margin-bottom: 4px;
   }
 
@@ -851,6 +852,7 @@ button {
   .post-title {
     margin-top: 0.5rem;
     margin-bottom: 1.25rem;
+
     font-size: 1rem;
   }
 
@@ -859,8 +861,8 @@ button {
   }
 
   .sidebar {
-    margin-top: 40px;
     width: 100%;
+    margin-top: 40px;
   }
 
   .new-post-title {
@@ -886,7 +888,18 @@ button {
   }
 
   .our-products-list {
-    margin-top: 0;
+    align-items: center;
+  }
+
+  .our-products-item {
+    max-width: 100%;
+  }
+
+  .our-products-header {
+    max-width: 285px;
+    width: 100%;
+
+    outline-offset: 18px;
   }
 }
 
@@ -908,5 +921,9 @@ button {
     flex-basis: 50vw;
 
     margin-bottom: 3px;
+  }
+
+  .our-products-list {
+    justify-content: center;
   }
 }
