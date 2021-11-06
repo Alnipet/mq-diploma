@@ -21,6 +21,15 @@ body {
   margin: 0;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -168,7 +177,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  flex-basis: 25vw;
+  flex-basis: 25%;
   height: 300px;
 
   background-color: black;
@@ -770,7 +779,7 @@ button {
   }
 
   .trend-posts-item {
-    max-width: calc(50% - 2px);
+    max-width: calc(50vw - 2px);
     flex-basis: 50vw;
 
     margin-bottom: 3px;
@@ -892,7 +901,7 @@ button {
   }
 
   .trend-posts-item {
-    max-width: calc(50% - 2px);
+    max-width: calc(50vw - 2px);
     flex-basis: 50vw;
 
     margin-bottom: 3px;
