@@ -1,4 +1,7 @@
 # Дипломный проект курса «Адаптивная и мобильная верстка»
+![GitHub last commit](https://img.shields.io/github/last-commit/Alnipet/mq-diploma)
+![GitHub top language](https://img.shields.io/github/languages/top/Alnipet/mq-diploma)
+![GitHub language](https://img.shields.io/github/languages/count/Alnipet/mq-diploma)
 
 **Диплом должен быть реализован локально и опубликован на сервисе [GitHub Pages](https://pages.github.com/). 
 Перед началом работы, пожалуйста, посмотрите видео-инструкцию по [ссылке](https://embed.new.video/cxEqtfQzkYST15TtikEAWF?sig=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lwIjoiMTA5LjI1Mi40MS45OCIsInZpZGVvX3Rva2VuIjoiY3hFcXRmUXprWVNUMTVUdGlrRUFXRiJ9.fqxDLhpUA1gcTj6mnjqO0q9r5Wvqk8by1jdkCzz6FMY).**
