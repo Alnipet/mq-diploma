@@ -298,7 +298,7 @@ button {
 }
 
 .post-image {
-    background-color: black;
+    background-color: #ffffff;
 }
 
 .post-content {
@@ -403,7 +403,7 @@ button {
 }
 
 .new-post-image {
-    background-color: black;
+    background-color: #ffffff;
 }
 
 .new-post-header {
@@ -472,7 +472,7 @@ button {
 
 .search-btn:hover {
     background-color: #a7973d;
-    transition: color .5s;
+    transition: background-color .5s;
 }
 
 .mailing {
@@ -506,7 +506,7 @@ button {
 
 .mailing-btn:hover {
     background-color: #a7973d;
-    transition: color .5s;
+    transition: background-color .5s;
 }
 
 .tags-widget {
@@ -656,7 +656,7 @@ button {
 
 .shopping-btn:hover {
     background-color: #a7973d;
-    transition: color .5s;
+    transition: background-color .5s;
 }
 
 .footer {
@@ -735,9 +735,11 @@ button {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 500px;
-    /*min-height: 70vh;*/
-    padding: 50px 35px;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+    min-width: 350px;
+    padding: 30px 25px;
 
     background-color: #ffffff;
     border-radius: 2px;
@@ -749,30 +751,30 @@ button {
     text-align: center;
     font-family: OpenSans-Bold, sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 18px;
     color: #000000;
 }
 
 .form-row {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .form-hint {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
-    font-size: 1.2rem;
+    font-size: 14px;
 }
 
 .select {
     display: block;
     width: 100%;
-    height: 45px;
+    height: 35px;
 
-    padding-left: 20px;
+    padding-left: 15px;
 
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: 14px;
     color: #333333;
 
     border: none;
@@ -788,7 +790,6 @@ button {
 }
 
 .radio {
-    /*position: absolute;*/
     display: none;
 }
 
@@ -797,20 +798,20 @@ button {
     display: inline-block;
     vertical-align: middle;
 
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     margin-right: 10px;
 
     background-image: url("../svg/form-empty-circle.svg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 25px;
+    background-size: 22px;
 }
 
 .radio-text {
     margin-right: 25px;
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: 14px;
 }
 
 .radio:checked ~ .radio-text:before {
@@ -826,12 +827,12 @@ button {
 .text-field {
     max-width: 100%;
     width: 100%;
-    min-height: 150px;
-    height: 150px;
-    padding: 10px 20px;
+    min-height: 100px;
+    height: 100px;
+    padding: 10px 15px;
 
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: 14px;
     color: #333333;
 
     border: none;
@@ -844,7 +845,7 @@ button {
     height: 50px;
 
     font-family: OpenSans-Bold, sans-serif;
-    font-size: 1.2rem;
+    font-size: 18px;
     text-transform: uppercase;
     color: #ffffff;
 
@@ -861,7 +862,7 @@ button {
 
 .popup-btn:hover {
     background-color: #a7973d;
-    transition: color .5s;
+    transition: background-color .5s;
 }
 
 .closed-form {
@@ -1079,6 +1080,46 @@ button {
         width: 100%;
 
         outline-offset: 18px;
+    }
+
+    .popup {
+        max-width: 350px;
+        width: 70vw;
+        min-width: 300px;
+        min-height: 70vh;
+
+        margin: 30px 5px;
+        padding: 5% 3%;
+    }
+
+    .popup-title {
+        font-size: 16px;
+    }
+
+    .popup .title:after {
+        margin-top: 7px;
+    }
+
+    .form-row:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .form-hint {
+        margin-bottom: 1vh;
+
+        font-size: 13px;
+    }
+
+    .radio {
+        display: none;
+    }
+
+    .text-field {
+        flex-grow: 1;
+        min-height: 60px;
+        height: 100%;
     }
 }
 
