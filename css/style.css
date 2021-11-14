@@ -307,19 +307,18 @@ button {
 
 .tags-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tags-item {
+    margin-right: 18px;
+
     font-size: 0.87rem;
     line-height: 1.2;
     font-weight: bold;
     font-family: OpenSans-Bold, sans-serif;
 
     color: #b59f5b;
-}
-
-.tags-item:nth-child(1n+2) {
-    margin-left: 18px;
 }
 
 .link-hover-black:hover {
