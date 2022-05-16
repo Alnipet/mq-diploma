@@ -456,12 +456,12 @@
   </a>
 </footer>
 <div class="popup-page _hidden">
-  <form class="popup">
+  <form name="popup" class="popup">
     <div class="popup-title title">Ваш фидбек</div>
     <div class="form-row">
       <label>
         <span class="form-hint">Как часто вы заходите на сайт?</span>
-        <select class="select">
+        <select name="select" class="select">
           <option selected>Почти каждый день</option>
           <option>Раз в неделю</option>
           <option>Раз в месяц</option>
@@ -472,25 +472,27 @@
     <div class="form-row">
       <span class="form-hint">Вы подписаны на e-mail рассылку?</span>
       <label class="radio-group">
-        <input class="radio" type="radio" name="radio-group">
+        <input class="radio" type="radio" name="radio-yes">
         <span class="radio-text">Да</span>
       </label>
       <label class="radio-group">
-        <input class="radio" type="radio" name="radio-group">
+        <input class="radio" type="radio" name="radio-no">
         <span class="radio-text">Нет</span>
       </label>
     </div>
     <div class="form-row">
       <span class="form-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-      <textarea class="text-field" placeholder="Может больше рецептов?" required></textarea>
+      <textarea class="text-field" placeholder="Может больше рецептов?" name="text-feedback" required></textarea>
     </div>
     <div class="form-row">
-      <button class="popup-btn" type="submit" src="#0">
+      <button name="send" class="popup-btn" type="submit">
         Отправить
       </button>
     </div>
-    <button class="closed-form" type="reset" src="#0"></button>
+    <button name="close" class="closed-form" type="reset"></button>
   </form>
 </div>
+
+<script src="main.js"></script>
 </body>
 </html>
