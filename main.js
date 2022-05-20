@@ -1,23 +1,45 @@
+'use strict';
+
+const popupPage = document.querySelector('.popup-page');
+const form = document.forms.popup;
+
 setTimeout(popupActivation, 3000);
 
 function popupActivation() {
-  const popupPage = document.querySelector('.popup-page');
-  const closedForm = document.querySelector('.closed-form');
-  const sendButton = document.querySelector('.popup-btn');
-  const form = document.forms.popup;
-
   popupPage.classList.remove('_hidden');
 
-  closedForm.addEventListener('click', () => {
+  form.close.addEventListener('click', () => {
     popupPage.classList.add('_hidden');
   });
 
-  sendButton.addEventListener('click', (e) => {
-    //e.preventDefault();
+  form.send.addEventListener('click', (e) => {
+    e.preventDefault();
 
-    let formData = new FormData(form);
-    localStorage.setItem('feedback', formData);
-    form.reset();
-    popupPage.classList.add('_hidden');
+    let formData = {
+      select: form.select.value,
+      radio: form.radio.value,
+      text: form.textFeedback.value,
+    };
+
+    if (validTextField()) {
+      if (localStorage) {
+        localStorage.setItem('feedback', JSON.stringify(formData));
+        console.log(JSON.parse(localStorage.getItem('feedback')));
+
+        form.reset();
+        popupPage.classList.add('_hidden');
+      }
+    } else {
+      form.textFeedback.classList.add('req-error');
+    }
   });
+}
+
+function validTextField() {
+  if (form.textFeedback.value.trim() !== '') {
+    return true;
+  } else {
+    form.textFeedback.value = '';
+    return false;
+  }
 }

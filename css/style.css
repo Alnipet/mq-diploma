@@ -859,6 +859,7 @@ button {
   border: 3px solid #a7973d;
 }
 
+
 .popup-btn:hover {
     background-color: #a7973d;
     transition: background-color .5s;
@@ -876,6 +877,10 @@ button {
     background-repeat: no-repeat;
     background-position: center right;
     background-color: rgba(0, 0, 0, 0);
+}
+
+.req-error {
+    border: 3px solid rgb(255, 146, 146);
 }
 
 ._hidden {
