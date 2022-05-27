@@ -2,6 +2,8 @@
 
 const popupPage = document.querySelector('.popup-page');
 const form = document.forms.popup;
+const menuBurger = document.querySelector('.menu-burger');
+const headerMenuInner = document.querySelector('.header-menu-inner');
 
 setTimeout(popupActivation, 3000);
 
@@ -43,3 +45,10 @@ function validTextField() {
     return false;
   }
 }
+
+menuBurger.addEventListener('click', () => {
+  Array.from(menuBurger.children).forEach((elem) => {
+    elem.classList.toggle('active');
+  });
+  headerMenuInner.classList.toggle('menu-active');
+});
