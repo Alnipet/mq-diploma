@@ -5,7 +5,7 @@ const form = document.forms.popup;
 const menuBurger = document.querySelector('.menu-burger');
 const headerMenuInner = document.querySelector('.header-menu-inner');
 
-setTimeout(popupActivation, 3000);
+setTimeout(popupActivation, 20000);
 
 function popupActivation() {
   popupPage.classList.remove('_hidden');
