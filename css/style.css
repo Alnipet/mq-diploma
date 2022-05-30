@@ -441,11 +441,13 @@ button {
 
 .visually-hidden {
   position: absolute;
+  font-size: 1px;
 
   width: 1px;
   height: 1px;
 
   clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
 }
 
 .search {
@@ -472,6 +474,7 @@ button {
   background-position: center;
   background-color: #b59f5b;
   background-size: 18px 18px;
+  flex:0 0 auto;
 }
 
 .search-btn:hover {
@@ -1148,7 +1151,8 @@ button {
   }
 
   .search-label {
-    flex-grow: 1;
+    /*flex-grow: 1;*/
+    width: 100%;
   }
 
   .search {
